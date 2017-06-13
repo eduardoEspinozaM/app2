@@ -56,9 +56,9 @@
                   <tr>
                      <td><%= autor.nombre %></td>
                      <td><%= autor.apellido %></td>
-                     <td><%= link_to 'Show', autor %></td>
-                     <td><%= link_to 'Edit', edit_autor_path(autor) %></td>
-                     <td><%= link_to 'Destroy', autor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                     <td class="fa fa-bar-chart-o"><%= link_to 'ver', autor %></td>
+                     <td><%= link_to 'Editar', edit_autor_path(autor) %></td>
+                     <td><%= link_to 'Eliminar', autor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                   <% end %>
                </tbody>
