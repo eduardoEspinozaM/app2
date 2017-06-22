@@ -1,4 +1,4 @@
-class CreateAutors < ActiveRecord::Migration[5.0]
+class CreateAutors < ActiveRecord::Migration
   def change
     create_table :autors do |t|
       t.string :nombre
