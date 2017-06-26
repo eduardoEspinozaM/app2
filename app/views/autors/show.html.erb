@@ -5,15 +5,30 @@
                <div class="">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @autor.nombre %>
-</p>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @autor.apellido %>
-</p>
+<div class="x_content">
 
-<%= link_to 'Edit', edit_autor_path(@autor) %> |
-<%= link_to 'Back', autors_path %>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><%= @autor.nombre %></td>
+                          <td><%= @autor.apellido %></td>
+                          <td><%= link_to 'EDITAR', edit_autor_path(@autor), class: "btn btn-round btn-primary fa fa-edit" %> |
+                              <%= link_to 'ATRAS', autors_path, class: "btn btn-round btn-dark fa fa-edit" %></td>
+                        </tr>
+                        
+                       
+                      </tbody>
+                    </table>
+
+                  </div>
+
