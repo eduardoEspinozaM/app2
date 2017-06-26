@@ -4,7 +4,7 @@
                      <div class="title_left">
                         <h3>Autores</h3>
                      </div>
-                     <div class="title_right">
+                   <!-- <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                            <div class="input-group">
                               <input type="text" class="form-control" placeholder="Search for...">
@@ -13,11 +13,9 @@
                               </span>
                            </div>
                         </div>
-                     </div>
+                     </div>-->
                   </div>
                   <div class="clearfix"></div>
-
-
 
 <p id="notice"><%= notice %></p>
 <div class="row">
@@ -28,15 +26,7 @@
             <ul class="nav navbar-right panel_toolbox">
                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                </li>
-               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                     <li><a href="#">Settings 1</a>
-                     </li>
-                     <li><a href="#">configuaracions  2</a>
-                     </li>
-                  </ul>
-               </li>
+             
                <li><a class="close-link"><i class="fa fa-close"></i></a>
                </li>
             </ul>
@@ -56,19 +46,18 @@
                   <tr>
                      <td><%= autor.nombre %></td>
                      <td><%= autor.apellido %></td>
-                     <td class="fa fa-bar-chart-o"><%= link_to 'ver', autor %></td>
-                     <td><%= link_to 'Editar', edit_autor_path(autor) %></td>
-                     <td><%= link_to 'Eliminar', autor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                     <td class="fa fa-bar-chart-o"><%= link_to 'ver', autor, class: "btn btn-round btn-success" %>
+                     <%= link_to 'Editar', edit_autor_path(autor), class: "btn btn-round btn-primary" %>
+                     <%= link_to 'Eliminar', autor, method: :delete, data: { confirm: '¿Estás seguro?' },class:"btn btn-round btn-danger" %></td>
                   </tr>
                   <% end %>
                </tbody>
             </table>
          </div>
       </div>
-   </div>
-</div>
-<%= link_to 'New Autor', new_autor_path %>
-
-
  </div>
-            </div>
+ </div>
+
+<%= link_to 'nuevo Autor', new_autor_path, class:"btn btn-success"%>
+
+
