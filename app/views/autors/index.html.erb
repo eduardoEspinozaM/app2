@@ -26,7 +26,6 @@
             <ul class="nav navbar-right panel_toolbox">
                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                </li>
-             
                <li><a class="close-link"><i class="fa fa-close"></i></a>
                </li>
             </ul>
@@ -47,9 +46,11 @@
                      <td><%= autor.nombre %></td>
                      <td><%= autor.apellido %></td>
                      <td class="fa fa-bar-chart-o"><%= link_to 'ver', autor, class: "btn btn-round btn-success" %>
-                     <%= link_to 'Editar', edit_autor_path(autor), class: "btn btn-round btn-primary" %>
+                     <%= link_to 'Editar', edit_autor_path(autor), class: "btn btn-round btn-primary fa fa-edit" %>
                      <%= link_to 'Eliminar', autor, method: :delete, data: { confirm: '¿Estás seguro?' },class:"btn btn-round btn-danger" %></td>
                   </tr>
+                  
+                 
                   <% end %>
                </tbody>
             </table>

@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613000737) do
+ActiveRecord::Schema.define(version: 20170626005033) do
 
   create_table "autors", force: true do |t|
     t.string   "nombre"
     t.string   "apellido"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categoria", force: true do |t|
+    t.string   "carrera"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
