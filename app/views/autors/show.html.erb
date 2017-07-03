@@ -4,8 +4,6 @@
 <div class="right_col" role="main">
                <div class="">
 <p id="notice"><%= notice %></p>
-
-
 <div class="x_content">
 
                     <table class="table table-striped">
@@ -23,7 +21,7 @@
                           <td><%= @autor.nombre %></td>
                           <td><%= @autor.apellido %></td>
                           <td><%= link_to 'EDITAR', edit_autor_path(@autor), class: "btn btn-round btn-primary fa fa-edit" %> |
-                              <%= link_to 'ATRAS', autors_path, class: "btn btn-round btn-dark fa fa-edit" %></td>
+                              <%= link_to 'ATRAS', autors_path, class: "btn btn-round btn-warning fa fa-trash-o fa-lg" %></td>
                         </tr>
                         
                        
@@ -31,4 +29,6 @@
                     </table>
 
                   </div>
+                    </div>
+                      </div>
 
