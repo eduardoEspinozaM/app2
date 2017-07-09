@@ -5,11 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true  %>
   <%= javascript_include_tag    'application', 'data-turbolinks-track' => true  %>
   <%= csrf_meta_tags %>
-  
-    
+ 
+      
+      
+      
        
 </head>
  
+ <script></script>
    <body class="nav-md">
     <div class="container body">
       <div class="main_container">
@@ -19,9 +22,17 @@
               <a href="<%= root_path %>" class="site_title"><i class="fa fa-graduation-cap"></i> <span> ProyectApp</span></a>
             </div>
      
-     
-     
-     
+ <div class="btn-group">
+                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"> Dropdown <span class="caret"></span> </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Dropdown link 1</a>
+                            </li>
+                            <li><a href="#">Dropdown link 2</a>
+                            </li>
+                            <li><a href="#">Dropdown link 3</a>
+                            </li>
+                          </ul>
+                        </div>
      <!--<div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
@@ -52,33 +63,59 @@
                 <ul class="nav side-menu" style="">
                   <li class="active"><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" style="display: block;">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="<%= autors_path %>">Autores</a></li>
+                      <li><a href="index2.html">Categoria</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>
+                      
+                      
                     </ul>
                   </li>
                 </ul>
               </div>
 
             </div>
+                <div class="btn-group" class="menu_section active">
+                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"> Dropdown <span class="caret"></span> </button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Dropdown link 1</a>
+                            </li>
+                            <li><a href="#">Dropdown link 2</a>
+                            </li>
+                            <li><a href="#">Dropdown link 3</a>
+                            </li>
+                          </ul>
+                        </div>
+                
+                 
+          
+                
+                 
+                 
+                 
+                 
                   
                   
                   <!-- sidebar menu -->
-                  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                     <div class="menu_section">
-                        <h3>ProyectApp</h3>
-                        <ul class="nav side-menu">
-                           <li>
-                              <a href="<%= autors_path %>"><i class="fa fa-home"></i> Autores <span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu">
-                                 <li><a href="index.html">Dashboard</a></li>
-                                 <li><a href="index2.html">Dashboard2</a></li>
-                                 <li><a href="index3.html">Dashboard3</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
+                 
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section active">
+                <h3>General</h3>
+                <ul class="nav side-menu" style="">
+                  <li class="active"><a><i class="fa fa-graduation-cap"></i> todas las carreras <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="display: block;">
+                      <li><a href="<%= autors_path %>">Analisis de Sistemas </a></li>
+                      <li><a href="index2.html">Diseño Grafico</a></li>
+                      <li><a href="index3.html">diseño de modas</a></li>
+                      
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+           
                   </div>
+                   </div>
                   
                   
                   

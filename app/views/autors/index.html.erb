@@ -14,10 +14,7 @@
                   </div>
                   
                </div>
-               <ul class="nav navbar-right panel_toolbox">
-                  <a class="close-link">
-                  <%= link_to 'Nuevo', new_autor_path, class:"btn btn-success btn-lg fa fa-share-square-o fa-lg" %></a>
-               </ul>
+              
                <div class="row">
                   <div class="col-sm-12">
                      <table id="link_to" class="table table-striped table-bordered ">
@@ -26,9 +23,12 @@
                       
                        
                         <thead>
+                           <ul class="nav navbar-right panel_toolbox">
+                  <a class="close-link">
+                  <%= link_to 'Nuevo', new_autor_path, class:"btn btn-success btn-lg fa fa-share-square-o fa-lg" %></a>
+               </ul>
                            <tr>
                             <th>#</th>
-                             <th>Foto del autor</th>
                               <th>Nombre</th>
                               <th>Apellido</th>
                               <th>Ver</th>
@@ -40,7 +40,7 @@
                            <% @autors.each do |autor| %>
                            <tr>
                                 <th scope="row">1</th>
-                               <td><%= autor.nombre %></td>
+                             
                               <td><%= autor.nombre %></td>
                               <td><%= autor.apellido %></td>
                               <td><%= link_to '', autor, class: "btn btn-round btn-success fa fa-eye fa-2x" %></td> 
