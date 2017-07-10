@@ -1,190 +1,134 @@
-
 <!DOCTYPE html>
 <html>
    <head>
-  <title>Mostrador</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true  %>
-  <%= javascript_include_tag    'application', 'data-turbolinks-track' => true  %>
-  <%= csrf_meta_tags %>
- 
-      
-      
-      
-       
-</head>
- 
- <script></script>
+      <title>Mostrador</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true  %>
+      <%= javascript_include_tag    'application', 'data-turbolinks-track' => true  %>
+      <%= csrf_meta_tags %>
+   </head>
+   <script></script>
    <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="<%= root_path %>" class="site_title"><i class="fa fa-graduation-cap"></i> <span> ProyectApp</span></a>
-            </div>
-     
-                       
-                       
-                       
-                       <!--
-                        <div class="btn-group">
-                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">"   Menu    "<span class="caret"></span> </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Dropdown link 1</a>
-                            </li>
-                            <li><a href="#">Dropdown link 2</a>
-                            </li>
-                            <li><a href="#">Dropdown link 3</a>
-                            </li>
-                          </ul>
-                        </div>
-     <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href=" class="site_title">  <span>ProyectApp</span></a>
-            </div>-->
-
-           
-           
-           
-           
-           
-           
-           
-            <div class="clearfix">
-                
-            </div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-             
-             
-            </div>
-                  <!-- /menu profile quick info -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section active">
-                <h3>General</h3>
-                <ul class="nav side-menu" style="">
-                  <li class="active"><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu" style="display: block;">
-                      <li><a href="<%= autors_path %>">Autores</a></li>
-                      <li><a href="menu.html.erb">Categoria</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                      
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-               
-                
-                 
-          
-                
-                 
-                 
-                 
-                 
-                  
-                  
-                  <!-- sidebar menu -->
-                 
-                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section active">
-                <h3>General</h3>
-                <ul class="nav side-menu" style="">
-                  <li class="active"><a><i class="fa fa-graduation-cap"></i> todas las carreras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu" style="display: block;">
-                      <li><a href="<%= autors_path %>">Analisis de Sistemas </a></li>
-                      <li><a href="index2.html">Diseño Grafico</a></li>
-                      <li><a href="index3.html">diseño de modas</a></li>
-                      
-                      
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-           
-
+      <div class="container body">
+         <div class="main_container">
+            <div class="col-md-3 left_col">
+               <div class="left_col scroll-view">
+                  <div class="navbar nav_title" style="border: 0;">
+                     <a href="<%= root_path %>" class="site_title"><i class="fa fa-graduation-cap"></i> <span> ProyectApp</span></a>
                   </div>
-                   </div>
-                  
-                  
-                  
-                  <!-- /sidebar menu -->
-                  <!-- /menu footer buttons -->
-                  <div class="sidebar-footer hidden-small">
-                     <a data-toggle="tooltip" data-placement="top" title="Settings">
-                     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                     </a>
-                     <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                     <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                     </a>
-                     <a data-toggle="tooltip" data-placement="top" title="Lock">
-                     <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                     </a>
-                     <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                     </a>
-                  </div>
-                  <!-- /menu footer buttons -->
-               </div>
-            </div>
-            <!-- top navigation -->
-            <div class="top_nav">
-               <div class="nav_menu">
-                  <nav>
-                     <div class="nav toggle">
-                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                  <!--
+                     <div class="btn-group">
+                       <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">"   Menu    "<span class="caret"></span> </button>
+                       <ul class="dropdown-menu">
+                         <li><a href="#">Dropdown link 1</a>
+                         </li>
+                         <li><a href="#">Dropdown link 2</a>
+                         </li>
+                         <li><a href="#">Dropdown link 3</a>
+                         </li>
+                       </ul>
                      </div>
-                     <!--<ul class="nav navbar-nav navbar-right">
-                        <li class="">
-                           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                           <img src="images/img.jpg" alt="">John Doe
-                           <span class=" fa fa-angle-down"></span>
-                           </a>
-                           
-                       
-                     </ul>-->
-                  </nav>
-               </div>
-            </div>
-            <!-- /top navigation -->
-            <!-- page content -->
-                 
-                 
-                 
-                 <p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-</p>
-                  <%= yield %>
+                     <div class="main_container">
+                     <div class="col-md-3 left_col">
+                     <div class="left_col scroll-view">
+                     <div class="navbar nav_title" style="border: 0;">
+                     <a href=" class="site_title">  <span>ProyectApp</span></a>
+                     </div>-->
+                  <div class="clearfix">
                   </div>
-                  
-                  
-                 
-         
-                  
-             <footer>
-          <div class="pull-right">
+                  <!-- menu profile quick info -->
+                  <div class="profile clearfix">
+                  </div>
+                  <!-- /menu profile quick info -->
+                  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                     <div class="menu_section active">
+                        <h3>General</h3>
+                        <ul class="nav side-menu" style="">
+                           <li class="active">
+                              <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                              <ul class="nav child_menu" style="display: block;">
+                                 <li><a href="<%= autors_path %>">Autores</a></li>
+                                 <li><a href="menu.html.erb">Categoria</a></li>
+                                 <li><a href="index3.html">Dashboard3</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- sidebar menu -->
+                  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                     <div class="menu_section active">
+                        <h3>General</h3>
+                        <ul class="nav side-menu" style="">
+                           <li class="active">
+                              <a><i class="fa fa-graduation-cap"></i> todas las carreras <span class="fa fa-chevron-down"></span></a>
+                              <ul class="nav child_menu" style="display: block;">
+                                 <li><a href="<%= autors_path %>">Analisis de Sistemas </a></li>
+                                 <li><a href="index2.html">Diseño Grafico</a></li>
+                                 <li><a href="index3.html">diseño de modas</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- /sidebar menu -->
+               <!-- /menu footer buttons -->
+               <div class="sidebar-footer hidden-small">
+                  <a data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                  <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="Lock">
+                  <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                  </a>
+                  <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                  <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                  </a>
+               </div>
+               <!-- /menu footer buttons -->
+            </div>
+         </div>
+         <!-- top navigation -->
+         <div class="top_nav">
+            <div class="nav_menu">
+               <nav>
+                  <div class="nav toggle">
+                     <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                  </div>
+                  <!--<ul class="nav navbar-nav navbar-right">
+                     <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="images/img.jpg" alt="">John Doe
+                        <span class=" fa fa-angle-down"></span>
+                        </a>
+                        
+                     
+                     </ul>-->
+               </nav>
+            </div>
+         </div>
+         <!-- /top navigation -->
+         <!-- page content -->
+         <p class="navbar-text pull-right">
+            <% if user_signed_in? %>
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>
+         </p>
+         <%= yield %>
+      </div>
+      <footer>
+         <div class="pull-right">
             Eduardo-Espinoza | Ariel-Bobadilla | Isidro   <a href="https://colorlib.com">DIGIO</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-     
-                  
-        
-
+         </div>
+         <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
    </body>
 </html>
