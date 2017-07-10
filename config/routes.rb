@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :publicars
+  
 
+  devise_for :users
+  resources :publicars
+    
+
+    
   resources :categoria
 
   resources :autors

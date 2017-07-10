@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -22,8 +23,12 @@
               <a href="<%= root_path %>" class="site_title"><i class="fa fa-graduation-cap"></i> <span> ProyectApp</span></a>
             </div>
      
- <div class="btn-group">
-                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"> Dropdown <span class="caret"></span> </button>
+                       
+                       
+                       
+                       <!--
+                        <div class="btn-group">
+                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">"   Menu    "<span class="caret"></span> </button>
                           <ul class="dropdown-menu">
                             <li><a href="#">Dropdown link 1</a>
                             </li>
@@ -33,7 +38,7 @@
                             </li>
                           </ul>
                         </div>
-     <!--<div class="main_container">
+     <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
@@ -64,7 +69,7 @@
                   <li class="active"><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" style="display: block;">
                       <li><a href="<%= autors_path %>">Autores</a></li>
-                      <li><a href="index2.html">Categoria</a></li>
+                      <li><a href="menu.html.erb">Categoria</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>
                       
                       
@@ -74,17 +79,7 @@
               </div>
 
             </div>
-                <div class="btn-group" class="menu_section active">
-                          <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"> Dropdown <span class="caret"></span> </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Dropdown link 1</a>
-                            </li>
-                            <li><a href="#">Dropdown link 2</a>
-                            </li>
-                            <li><a href="#">Dropdown link 3</a>
-                            </li>
-                          </ul>
-                        </div>
+               
                 
                  
           
@@ -114,6 +109,7 @@
               </div>
 
            
+
                   </div>
                    </div>
                   
@@ -159,9 +155,22 @@
             </div>
             <!-- /top navigation -->
             <!-- page content -->
+                 
+                 
+                 
+                 <p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p>
                   <%= yield %>
                   </div>
-                  </div>
+                  
                   
                  
          
