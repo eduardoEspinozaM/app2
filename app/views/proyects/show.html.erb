@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @proyect.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @proyect.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+ 
+
+<% unless @proyect.image.blank? %>   
+                            <%=image_tag(@proyect.image.url, class:"img-responsive avatar-view")%>     
+                          <%else%>
+                           
+                          <%end%>
+
+
+
+</p>
+
+<p>
+  <strong>File:</strong>
+  
+<% unless @proyect.file.blank? %>
+                          <span>
+                          <%= link_to 'documento'.html_safe, @proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %>
+                          </span>
+                          <%else%>
+                          <%end%>
+
+
+</p>
+
+<%= link_to 'Edit', edit_proyect_path(@proyect) %> |
+<%= link_to 'Back', proyects_path %>

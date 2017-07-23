@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :proyects
+
   devise_for :users
   resources :publicars
     
