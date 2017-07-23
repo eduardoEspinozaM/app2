@@ -35,7 +35,17 @@
                                            <H2>  <td><%= proyect.title %></td></H2>
                                             <td><%= proyect.description %></td>
                                             <td><%= image_tag proyect.image, class:"", width:"100px", height:"100px" %>
-                                            <td><button></button><span><%= link_to  proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %> </span></button></td>
+                                            <td> 
+  
+                          <span>
+                          <%= link_to 'documento'.html_safe, proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %>
+
+                          </span>
+
+
+
+</p></td>
+
                                             <td><%= link_to '', proyect, class: "btn btn-round btn-success fa fa-eye fa-2x" %></td>
                                             <td><%= link_to '', edit_proyect_path(proyect), class: "btn btn-round btn-primary fa fa-pencil-square-o fa-2x" %> </td>
                                             <td><%= link_to '', proyect, method: :delete, data: { confirm: '¿Estás seguro?' },class:"btn btn-round btn-danger fa fa-trash-o fa-2x" %>

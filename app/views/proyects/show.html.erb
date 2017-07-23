@@ -1,21 +1,27 @@
+
+<div class="right_col" role="main">
+    <div class="">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @proyect.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
+
+ <h3>
+  <strong>Titulo:</strong></h3>
+  
+        <h4> <%= @proyect.title %></h4>
+
+  <h3> <strong>Description:</strong></h3>
+ <div class="clearfix"></div>
   <%= @proyect.description %>
-</p>
 
+<div class="clearfix"></div>
 <p>
-  <strong>Image:</strong>
+  
  
-
+<div class="clearfix"></div>
+<br>
 <% unless @proyect.image.blank? %>   
-                            <%=image_tag(@proyect.image.url, class:"img-responsive avatar-view")%>     
+                            <%=image_tag(@proyect.image.url, class:"img-responsive avatar-view", class:"", width:"200px", height:"200px") %>     
                           <%else%>
                            
                           <%end%>
@@ -25,17 +31,19 @@
 </p>
 
 <p>
-  <strong>File:</strong>
+ 
   
-<% unless @proyect.file.blank? %>
+                          <% unless @proyect.file.blank? %>
                           <span>
                           <%= link_to 'documento'.html_safe, @proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %>
                           </span>
-                          <%else%>
                           <%end%>
 
 
 </p>
 
-<%= link_to 'Edit', edit_proyect_path(@proyect) %> |
-<%= link_to 'Back', proyects_path %>
+<%= link_to 'Edit', edit_proyect_path(@proyect), class: "btn btn-round btn-primary" %> |
+<%= link_to 'atras', proyects_path, class: "btn btn-round btn-warning " %>
+
+</div>
+</div>
