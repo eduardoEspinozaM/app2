@@ -23,12 +23,12 @@
     <%= f.text_area :description, class: "form-control", rows:"3" %>
   </div>
   <div class="field">
-   <br>
-    <%= f.file_field :image, class: "fa fa-photo fa-2x" %>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
   </div>
   <div class="field">
-    <br>
-    <%= f.file_field :file,class: "fa fa-folder-open fa-2x" %>
+    <%= f.label :file %><br>
+    <%= f.file_field :file %>
   </div>
 
   <div class="actions">
