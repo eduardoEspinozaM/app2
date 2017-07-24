@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     
 
     
-  resources :categoria
+  resources :categorias
 
   resources :autors
  

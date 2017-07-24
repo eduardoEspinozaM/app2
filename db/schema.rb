@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170722210914) do
   create_table "autors", force: true do |t|
     t.string   "nombre"
     t.string   "apellido"
+    t.string   "foto"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,47 +1,47 @@
 class CategoriaController < ApplicationController
-  before_action :set_categorium, only: [:show, :edit, :update, :destroy]
+  before_action :set_categoria, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @categoria = Categorium.all
+    @categoria = Categoria.all
     respond_with(@categoria)
   end
 
   def show
-    respond_with(@categorium)
+    respond_with(@categoria)
   end
 
   def new
-    @categorium = Categorium.new
-    respond_with(@categorium)
+    @categoria = Categoria.new
+    respond_with(@categoria)
   end
 
   def edit
   end
 
   def create
-    @categorium = Categorium.new(categorium_params)
-    @categorium.save
-    respond_with(@categorium)
+    @categoria = Categoria.new(categoria_params)
+    @categoria.save
+    respond_with(@categoria)
   end
 
   def update
-    @categorium.update(categorium_params)
-    respond_with(@categorium)
+    @categoria.update(categoria_params)
+    respond_with(@categoria)
   end
 
   def destroy
-    @categorium.destroy
-    respond_with(@categorium)
+    @categoria.destroy
+    respond_with(@categoria)
   end
 
   private
-    def set_categorium
-      @categorium = Categorium.find(params[:id])
+    def set_categoria
+      @categoria = Categoria.find(params[:id])
     end
 
-    def categorium_params
-      params.require(:categorium).permit(:carrera)
+    def categoria_params
+      params.require(:categoria).permit(:carrera)
     end
 end
