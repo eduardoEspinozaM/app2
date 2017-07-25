@@ -14,7 +14,7 @@
                                             <%= link_to 'Nuevo', new_autor_path, class:"btn btn-success btn-lg fa fa-share-square-o fa-lg" %></a>
                                         </ul>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Proyecto</th>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
                                             <th>Ver</th>
@@ -25,7 +25,8 @@
                                     <tbody>
                                         <% @autors.each do |autor| %>
                                         <tr>
-                                            <th scope="row">1</th>
+                                            
+                                            <td><%= autor.proyect.title %></td>
                                             <td><%= autor.nombre %></td>
                                             <td><%= autor.apellido %></td>
                                             <td><%= link_to '', autor, class: "btn btn-round btn-success fa fa-eye fa-2x" %></td>

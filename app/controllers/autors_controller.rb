@@ -69,6 +69,6 @@ class AutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def autor_params
-      params.require(:autor).permit(:nombre, :apellido)
+      params.require(:autor).permit(:proyect_id, :nombre, :apellido)
     end
 end

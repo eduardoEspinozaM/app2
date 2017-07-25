@@ -10,11 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+ <div class="col-lg-3 form-group">
+                <%= f.label :proyect_id %>
+                <%= f.collection_select(:proyect_id, Proyect.all, :id, :title, {prompt: true}, {:class=>'form-control input-sm'}) %>
+            </div>
 <div class="col-lg-6">
-<div class="input-group ">
+  <div class="input-group ">
   <span class="control-label col-md-3 col-sm-3 col-xs-12" ><%= f.label :nombre %></span>
   
+  
+
+
   <%= f.text_field :nombre, class:"form-control" %>
  
 </div>
