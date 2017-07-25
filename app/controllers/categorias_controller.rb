@@ -42,6 +42,6 @@ class CategoriasController < ApplicationController
     end
 
     def categoria_params
-      params[:categoria]
+      params.require(:categoria).permit(:carrera)
     end
 end

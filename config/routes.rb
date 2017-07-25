@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :categorias
 
+  resources :categorias
+
   resources :proyects
    root :to => "proyects#index"
   devise_for :users
