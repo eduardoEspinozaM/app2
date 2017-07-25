@@ -1,11 +1,11 @@
-class CategoriaController < ApplicationController
+class CategoriasController < ApplicationController
   before_action :set_categoria, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @categoria = Categoria.all
-    respond_with(@categoria)
+    @categorias = Categoria.all
+    respond_with(@categorias)
   end
 
   def show
@@ -22,12 +22,12 @@ class CategoriaController < ApplicationController
 
   def create
     @categoria = Categoria.new(categoria_params)
-    @categoria.save
+    flash[:notice] = 'Categoria was successfully created.' if @categoria.save
     respond_with(@categoria)
   end
 
   def update
-    @categoria.update(categoria_params)
+    flash[:notice] = 'Categoria was successfully updated.' if @categoria.update(categoria_params)
     respond_with(@categoria)
   end
 
@@ -42,6 +42,6 @@ class CategoriaController < ApplicationController
     end
 
     def categoria_params
-      params.require(:categoria).permit(:carrera)
+      params[:categoria]
     end
 end
