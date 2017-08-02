@@ -28,7 +28,7 @@ class AutorsController < ApplicationController
 
     respond_to do |format|
       if @autor.save
-        format.html { redirect_to @autor, notice: 'Autor was successfully created.' }
+        format.html { redirect_to @autor, notice: 'Autor creado Exitosamente!.' }
         format.json { render :show, status: :created, location: @autor }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AutorsController < ApplicationController
   def update
     respond_to do |format|
       if @autor.update(autor_params)
-        format.html { redirect_to @autor, notice: 'Autor was successfully updated.' }
+        format.html { redirect_to @autor, notice: 'Autor actualizado Exitosamente!.' }
         format.json { render :show, status: :ok, location: @autor }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AutorsController < ApplicationController
   def destroy
     @autor.destroy
     respond_to do |format|
-      format.html { redirect_to autors_url, notice: 'Autor was successfully destroyed.' }
+      format.html { redirect_to autors_url, notice: 'Autor Eliminado!.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class AutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def autor_params
-      params.require(:autor).permit(:proyect_id, :nombre, :apellido)
+      params.require(:autor).permit(:proyect_id, :title, :nombre, :apellido, :email, :telef, :fecha_nacimiento, :universidad)
     end
 end

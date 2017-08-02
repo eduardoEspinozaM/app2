@@ -22,12 +22,12 @@ class ProyectsController < ApplicationController
 
   def create
     @proyect = Proyect.new(proyect_params)
-    flash[:notice] = 'Proyect was successfully created.' if @proyect.save
+    flash[:notice] = 'Proyecto creado Exitosamente!.' if @proyect.save
     respond_with(@proyect)
   end
 
   def update
-    flash[:notice] = 'Proyect was successfully updated.' if @proyect.update(proyect_params)
+    flash[:notice] = 'Proyecto actualizado Exitosamente!.' if @proyect.update(proyect_params)
     respond_with(@proyect)
   end
 
@@ -42,6 +42,6 @@ class ProyectsController < ApplicationController
     end
 
     def proyect_params
-      params.require(:proyect).permit(:title, :description, :image, :file)
+      params.require(:proyect).permit(:title, :description, :image, :file, :categoria)
     end
 end

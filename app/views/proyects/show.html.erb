@@ -1,38 +1,78 @@
-<div class="right_col" role="main">
-   <div class="">
-      <p id="notice"><%= notice %></p>
-      <h3>
-         <strong>Titulo:</strong>
-      </h3>
-      <h4> <%= @proyect.title %></h4>
-      <h3>
-         <strong>Titulo:</strong>
-      </h3>
-      <% @proyect.autors.each do |autor| %>
-      <span>
-      <%= autor.nombre %>
-      </span>  
-      <% end %>
-      <h3> <strong>Description:</strong></h3>
-      <div class="clearfix"></div>
-      <%= @proyect.description %>
-      <div class="clearfix"></div>
-      <p>
-      <div class="clearfix"></div>
-      <br>
+
+<div style="width: 50%; margin:0 auto;">
+<div class="col-xs-6 col-md-12">
+<div class="col-xs-6 col-md-12">
+
+
+
+
+    
+       <div class="col-xs-4">
       <% unless @proyect.image.blank? %>   
       <%=image_tag(@proyect.image.url, class:"img-responsive avatar-view", class:"", width:"200px", height:"200px") %>     
       <%else%>
       <%end%>
+      </div>
+      <div class="form-group">
+      <div class="col-xs-6">
+<% @proyect.autors.each do |autor| %>
+
+      <h4>
+         <strong>Titulo:</strong>
+      </h4>
+
+      <h4> <%= @proyect.title %></h4>
+      <h4>
+      
+         <strong>Autor:</strong>
+      </h4>
+      
+
+      <span>
+      <%= autor.nombre %>
+      <%= autor.apellido %>
+      </span>
+      <br>
+     <h4> <strong>Universidad:</strong> </h4>
+      <span>
+      <%= autor.universidad %>
+      </span>
+       <br>
+     <h4> <strong>E-mail:</strong> </h4>
+      <span>
+      <%= autor.email %>
+      </span>
+
+      <% end %>
+      <h4> <strong>Description:</strong></h4>
+      <div class="clearfix"></div>             
+         <p><%= @proyect.description %></p>                        
+      
+      <h4> <strong>Categoria:</strong> </h4>
+      <span>
+      <%= @proyect.categoria%>
+      </span>
+      </div>
+</div>
+     
       </p>
       <p>
          <% unless @proyect.file.blank? %>
+         </div>
+</div>
+
+<div class="col-xs-6 ">
          <span>
-         <%= link_to 'documento'.html_safe, @proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %>
+
+         <%= link_to 'Descargar'.html_safe, @proyect.file_url, target: '_blank' , class: "btn btn-default btn-sm" %>
          </span>
          <%end%>
       </p>
-      <%= link_to 'Edit', edit_proyect_path(@proyect), class: "btn btn-round btn-primary" %> |
+<% if current_user.email == 'admin@gmail.com' %>
+      <%= link_to 'editar', edit_proyect_path(@proyect), class: "btn btn-round btn-primary" %> |
+      <% end %>
       <%= link_to 'atras', proyects_path, class: "btn btn-round btn-warning " %>
-   </div>
+   
+</div>
+
 </div>
